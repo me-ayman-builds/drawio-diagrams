@@ -1,102 +1,144 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.5.1">
-  <diagram name="Page-1" id="ayf2ByYi6YQCm_Zrtza7">
-    <mxGraphModel dx="1030" dy="568" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Client" vertex="1">
-          <mxGeometry height="80" width="40" x="440" y="430" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;spacingTop=10;" value="Router&#xa;(Request Routing Service)&#xa;┌─────────────────┐&#xa;│Local Route Cache│&#xa;└─────────────────┘" vertex="1">
-          <mxGeometry height="100" width="160" x="560" y="420" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=center;" value="Global Admission Control&#xa;(GAC)&#xa;Token Buckets" vertex="1">
-          <mxGeometry height="70" width="140" x="740" y="310" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;" value="MemDS&#xa;(In-Memory Data Store)&#xa;Patricia/Merkle Tree" vertex="1">
-          <mxGeometry height="70" width="140" x="780" y="530" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;" value="Metadata Service&#xa;Persistent Storage&#xa;Table-to-Partition Mapping" vertex="1">
-          <mxGeometry height="70" width="160" x="1020" y="530" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;" value="AutoAdmin Service&#xa;Orchestrator&#xa;Health &amp; Rebalancing" vertex="1">
-          <mxGeometry height="70" width="140" x="560" y="230" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-7" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#d5e8d4;strokeColor=#82b366;align=center;" value="Storage Node 1&#xa;(AZ1)" vertex="1">
-          <mxGeometry height="20" width="100" x="980" y="270" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-8" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#d5e8d4;strokeColor=#82b366;align=center;" value="Storage Node 2&#xa;(AZ2)" vertex="1">
-          <mxGeometry height="20" width="100" x="980" y="370" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-9" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#d5e8d4;strokeColor=#82b366;align=center;" value="Storage Node 3&#xa;(AZ3)" vertex="1">
-          <mxGeometry height="30" width="100" x="980" y="460" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-10" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="NqOi1v70RdsN3e_xv0dA-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-11" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" target="NqOi1v70RdsN3e_xv0dA-3">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="640" y="340" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-12" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="NqOi1v70RdsN3e_xv0dA-4">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="640" y="565" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-13" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" target="NqOi1v70RdsN3e_xv0dA-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-14" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="NqOi1v70RdsN3e_xv0dA-7">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="920" y="470" />
-              <mxPoint x="920" y="190" />
-              <mxPoint x="1020" y="190" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-15" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="NqOi1v70RdsN3e_xv0dA-8">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="920" y="470" />
-              <mxPoint x="920" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-16" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="NqOi1v70RdsN3e_xv0dA-9">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="920" y="470" />
-              <mxPoint x="920" y="460" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-17" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" target="NqOi1v70RdsN3e_xv0dA-7">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="840" y="265" />
-              <mxPoint x="840" y="300" />
-              <mxPoint x="960" y="300" />
-              <mxPoint x="960" y="284" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-18" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" target="NqOi1v70RdsN3e_xv0dA-8">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="NqOi1v70RdsN3e_xv0dA-19" edge="1" parent="1" source="NqOi1v70RdsN3e_xv0dA-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;" target="NqOi1v70RdsN3e_xv0dA-9">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1030" y="265" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+<mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <mxCell id="ControlPlane_Box" value="&lt;b&gt;Control Plane&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B3B3B3;dashed=1;verticalAlign=top;spacingTop=10;fontSize=14;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="440" y="30" width="580" height="230" as="geometry" />
+    </mxCell>
+
+    <mxCell id="DataPlane_Box" value="&lt;b&gt;Data Plane&lt;/b&gt; (Storage Nodes / Replication Group)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B3B3B3;dashed=1;verticalAlign=top;spacingTop=10;fontSize=14;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="440" y="300" width="680" height="420" as="geometry" />
+    </mxCell>
+
+    <mxCell id="AZ1_Box" value="Availability Zone 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;spacingTop=10;fontStyle=1;fontColor=#999999;" vertex="1" parent="1">
+      <mxGeometry x="460" y="340" width="200" height="360" as="geometry" />
+    </mxCell>
+
+    <mxCell id="AZ2_Box" value="Availability Zone 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;spacingTop=10;fontStyle=1;fontColor=#999999;" vertex="1" parent="1">
+      <mxGeometry x="680" y="340" width="200" height="360" as="geometry" />
+    </mxCell>
+
+    <mxCell id="AZ3_Box" value="Availability Zone 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;verticalAlign=top;spacingTop=10;fontStyle=1;fontColor=#999999;" vertex="1" parent="1">
+      <mxGeometry x="900" y="340" width="200" height="360" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Client" value="&lt;b&gt;Client Application&lt;/b&gt;&lt;br&gt;(AWS SDK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="40" y="470" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Router" value="&lt;b&gt;Request Router&lt;/b&gt;&lt;br&gt;(Traffic Controller)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="240" y="470" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="GAC" value="&lt;b&gt;Global Admission Control&lt;/b&gt;&lt;br&gt;[Token Buckets/Adaptive]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="480" y="80" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Metadata" value="&lt;b&gt;Metadata Service&lt;/b&gt;&lt;br&gt;[Partition Lookups]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="660" y="80" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="MemDS" value="&lt;b&gt;MemDS&lt;/b&gt;&lt;br&gt;(In-Memory Cache)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="660" y="190" width="140" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="AutoAdmin" value="&lt;b&gt;AutoAdmin Service&lt;/b&gt;&lt;br&gt;[Central Nervous System]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="840" y="80" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Node_Leader" value="&lt;b&gt;Storage Node&lt;/b&gt;&lt;br&gt;(Partition Leader)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="480" y="380" width="160" height="300" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Leader_BTree" value="B-Tree Engine&lt;br&gt;(SSD Data)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="510" y="440" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Leader_Log" value="Replication Log" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="510" y="540" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Node_Follower1" value="&lt;b&gt;Storage Node&lt;/b&gt;&lt;br&gt;(Partition Follower)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="700" y="380" width="160" height="300" as="geometry" />
+    </mxCell>
+
+    <mxCell id="F1_BTree" value="B-Tree Engine&lt;br&gt;(SSD Data)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="730" y="440" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="F1_Log" value="Replication Log" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="730" y="540" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Node_Follower2" value="&lt;b&gt;Storage Node&lt;/b&gt;&lt;br&gt;(Partition Follower)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+      <mxGeometry x="920" y="380" width="160" height="300" as="geometry" />
+    </mxCell>
+
+    <mxCell id="F2_BTree" value="B-Tree Engine&lt;br&gt;(SSD Data)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="950" y="440" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="F2_Log" value="Replication Log" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="950" y="540" width="100" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="Streams" value="&lt;b&gt;DynamoDB Streams&lt;/b&gt;&lt;br&gt;(Log Propagator)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="480" y="760" width="160" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_client_router" value="API Request" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;" edge="1" parent="1" source="Client" target="Router">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_router_gac" value="1. Quota Check" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;strokeWidth=2;" edge="1" parent="1" source="Router" target="GAC">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_router_meta" value="2. Partition Lookup" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.75;exitY=0;entryX=0;entryY=0.5;strokeWidth=2;" edge="1" parent="1" source="Router" target="Metadata">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="345" y="110" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="e_meta_memds" value="Cache Hit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;startArrow=classic;endArrow=classic;" edge="1" parent="1" source="Metadata" target="MemDS">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_router_leader" value="3. Write / Consistent Read" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;strokeWidth=2;" edge="1" parent="1" source="Router" target="Node_Leader">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_router_f1" value="Eventual Read" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.9;strokeWidth=1;dashed=1;" edge="1" parent="1" source="Router" target="Node_Follower1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_admin_meta" value="Topology Updates" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;strokeWidth=1;" edge="1" parent="1" source="AutoAdmin" target="Metadata">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_admin_leader" value="Health / Partition Splits" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.75;entryY=0;strokeWidth=1;dashed=1;fontColor=#666666;" edge="1" parent="1" source="AutoAdmin" target="Node_Leader">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="910" y="260" />
+          <mxPoint x="600" y="260" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <mxCell id="e_paxos_1" value="Multi-Paxos (Quorum Write)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;dashed=1;startArrow=classic;endArrow=classic;" edge="1" parent="1" source="Leader_Log" target="F1_Log">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_paxos_2" value="Multi-Paxos Sync" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeWidth=2;dashed=1;startArrow=classic;endArrow=classic;" edge="1" parent="1" source="F1_Log" target="F2_Log">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="e_log_streams" value="Change Data Capture" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeWidth=1;dashed=1;" edge="1" parent="1" source="Leader_Log" target="Streams">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
